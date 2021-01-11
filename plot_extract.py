@@ -5,7 +5,7 @@ import pandas as pd
 
 st.set_page_config(layout="wide")
 
-st.title("""parallel coordinates vizualization tool """)
+st.title("""(Hyper) vizualization tool to explore your dataset""")
 
 col1, col2 = st.beta_columns(2)
 
@@ -15,7 +15,7 @@ with col2:
 
 
 with col1:
-    st.write('Datasets examples')
+    st.write('example datasets')
 
 
 #@st.cache
@@ -36,6 +36,9 @@ if path:
 xp = hip.Experiment.from_iterable(data)
 
 # Display with `display_st` instead of `display`
+
+st.write('''Parallel plots are a convenient way to visualize and filter high-dimensional data.
+            (click help explanation)''')
 ret_val = xp.display_st(ret="selected_uids", key="hip")
 
 #st.markdown("hiplot returned " + json.dumps(ret_val))
