@@ -38,7 +38,7 @@ xp = hip.Experiment.from_iterable(data)
 # Display with `display_st` instead of `display`
 
 st.write('''Parallel plots are a convenient way to visualize and filter high-dimensional data.
-            (click help explanation)''')
+            (click help for explanation)''')
 ret_val = xp.display_st(ret="selected_uids", key="hip")
 
 #st.markdown("hiplot returned " + json.dumps(ret_val))
