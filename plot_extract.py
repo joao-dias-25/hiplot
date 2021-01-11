@@ -11,7 +11,7 @@ col1, col2 = st.beta_columns(2)
 
 with col2:
     st.write('''Explore your dataset ''')
-    path = st.text_input('# csv file path')
+    path = st.file_uploader("Upload Files",type=['csv'])
 
 
 with col1:
